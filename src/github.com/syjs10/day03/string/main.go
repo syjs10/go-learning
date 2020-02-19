@@ -7,7 +7,7 @@ func main() {
 	fmt.Println("\u4e16\u754c")
 	fmt.Println(HasPrefix("hello\xe4\xb8\x96\xe7\x95\x8c", "hello"))
 	fmt.Println(HasSuffix("hello\xe4\xb8\x96\xe7\x95\x8c", "\u4e16\u754c"))
-	fmt.Println(Contains("123hello\xe4\xb8\x96\xe7\x95\x8c312", "\u4e16\u754c"))
+	fmt.Println(Contains("123hello\xe4\xb8\x96\xe7\x95\x8c311s21", "\u4e16\u754c"))
 }
 
 /*
