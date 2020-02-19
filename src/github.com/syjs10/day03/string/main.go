@@ -8,6 +8,12 @@ func main() {
 	fmt.Println(HasPrefix("hello\xe4\xb8\x96\xe7\x95\x8c", "hello"))
 	fmt.Println(HasSuffix("hello\xe4\xb8\x96\xe7\x95\x8c", "\u4e16\u754c"))
 	fmt.Println(Contains("123hello\xe4\xb8\x96\xe7\x95\x8c311s21", "\u4e16\u754c"))
+	for i, r := range "hello, 世界" {
+		fmt.Printf("%d\t%q\t%d\n", i, r, r)
+	}
+	s := "hello, 世界"
+	r := []rune(s)
+	fmt.Printf("%q", r[8])
 }
 
 /*
