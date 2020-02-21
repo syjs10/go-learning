@@ -14,6 +14,11 @@ func main() {
 	s := "hello, 世界"
 	r := []rune(s)
 	fmt.Printf("%q", r[8])
+	n := 0
+	for range s {
+		n++
+	}
+	fmt.Println(n)
 }
 
 /*
