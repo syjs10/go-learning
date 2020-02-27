@@ -22,7 +22,7 @@ func main() {
 	for _, name := range names {
 		fmt.Printf("%s\t%d\n", name, ages[name])
 	}
-	if age, ok := ages["xxx"]; !ok {
+	if age, ok := ages["js"]; !ok {
 		fmt.Println(age)
 	}
 }
