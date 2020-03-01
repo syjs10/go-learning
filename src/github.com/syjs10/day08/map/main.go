@@ -9,7 +9,7 @@ func main() {
 	}
 	y := map[string]int{
 		"test": 1,
-		"abc":  3,
+		"abc":  2,
 	}
 	fmt.Println(equal(x, y))
 }
