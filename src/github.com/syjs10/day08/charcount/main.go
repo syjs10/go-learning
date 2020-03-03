@@ -25,7 +25,7 @@ func main() {
 			os.Exit(1)
 		}
 		if r == unicode.ReplacementChar && n == 1 {
-			invalid ++
+			invalid++
 			continue
 		}
 		counts[r]++
@@ -38,7 +38,7 @@ func main() {
 	fmt.Printf("\nlen\tcount\n")
 	for i, n := range utflen {
 		if i > 0 {
-			fmt.Printf("%d\t%f\n", i, n)
+			fmt.Printf("%d\t%d\n", i, n)
 		}
 	}
 	if invalid > 0 {
