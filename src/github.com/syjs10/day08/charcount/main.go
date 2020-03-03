@@ -25,7 +25,7 @@ func main() {
 			os.Exit(1)
 		}
 		if r == unicode.ReplacementChar && n == 1 {
-			invalid++
+			invalid ++
 			continue
 		}
 		counts[r]++
