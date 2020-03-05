@@ -19,4 +19,5 @@ func hasEdge(from, to string) bool {
 func main() {
 	addEdge("A", "B")
 	fmt.Println(hasEdge("A", "B"))
+	fmt.Println(hasEdge("A", "C"))
 }
