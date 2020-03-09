@@ -36,5 +36,5 @@ func main() {
 		},
 		Spokes: 20,
 	}
-	fmt.Printf("%#v\n", w)
+	fmt.Printf("%#v \n", w)
 }
