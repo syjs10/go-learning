@@ -23,8 +23,23 @@ var movies = []Movie{
 			"Ingrid Bergman",
 		},
 	},
-	{Title: "Cool Hand Luke", Year: 1967, Color: true, Actors: []string{"Paul Newman"}},
-	{Title: "Bullitt", Year: 1968, Color: true, Actors: []string{"Steve McQueen", "Jacqueline Bisset"}},
+	{
+		Title: "Cool Hand Luke",
+		Year: 1967,
+		Color: true,
+		Actors: []string{
+			"Paul Newman",
+		},
+	},
+	{
+		Title: "Bullitt",
+		Year: 1968,
+		Color: true,
+		Actors: []string{
+			"Steve McQueen",
+			"Jacqueline Bisset",
+		},
+	},
 }
 data, err := json.Marshal(movies)
 if err != nil {
