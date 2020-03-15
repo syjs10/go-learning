@@ -25,7 +25,7 @@ var movies = []Movie{
 	},
 	{
 		Title: "Cool Hand Luke",
-		Year: 1967,
+		Year:  1967,
 		Color: true,
 		Actors: []string{
 			"Paul Newman",
@@ -34,7 +34,7 @@ var movies = []Movie{
 
 	{
 		Title: "Bullitt",
-		Year: 1968,
+		Year:  1968,
 		Color: true,
 		Actors: []string{
 			"Steve McQueen",
@@ -42,9 +42,16 @@ var movies = []Movie{
 		},
 	},
 }
-data, err := json.Marshal(movies)
-if err != nil {
-	log.Fatalf('Json marshanling faild: %s', err)
-}
-fmt.Printf("%s\n", data)
 
+func main() {
+	data, err := json.Marshal(movies)
+	if err != nil {
+		log.Fatalf("Json marshanling faild: %s", err)
+	}
+	fmt.Printf("%s\n", data)
+	data, err = json.MarshalIndent(movies, "", "	")
+	if err != nil {
+		log.Fatalf("Json marshanling faild: %s", err)
+	}
+	fmt.Printf("%s\n", data)
+}
