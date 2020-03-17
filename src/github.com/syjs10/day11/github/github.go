@@ -1,8 +1,11 @@
 package github
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"net/url"
+	"strings"
 	"time"
 )
 
@@ -28,9 +31,20 @@ type User struct {
 }
 
 func SearchIssues(terms []string) (*IssueSearchResult, error) {
-	q := url.QueryEscape(string.Join(terms, " "))
+	q := url.QueryEscape(strings.Join(terms, " "))
 	resq, err := http.Get(IssuesURL + "?q=" + q)
 	if err != nil {
 		return nil, err
 	}
+	if resq.StatusCode != http.StatusOK {
+		resq.Body.Close()
+		return nil, fmt.Errorf("Search query faild: %s", resq.Status)
+	}
+	var result IssueSearchResult
+	if err := json.NewDecoder(resq.Body).Decode(&result); err != nil {
+		resq.Body.Close()
+		return nil, err
+	}
+	resq.Body.Close()
+	return &result, nil
 }
