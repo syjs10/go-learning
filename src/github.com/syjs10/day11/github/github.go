@@ -16,13 +16,13 @@ type IssueSearchResult struct {
 	Items      []*Issue
 }
 type Issue struct {
-	Number  int
-	HTMLURL string
-	Title   string
-	State   string
-	User    *User
-	Create  time.Time `json:"create_at"`
-	Body    string
+	Number   int
+	HTMLURL  string
+	Title    string
+	State    string
+	User     *User
+	CreateAt time.Time `json:"created_at"`
+	Body     string
 }
 
 type User struct {
