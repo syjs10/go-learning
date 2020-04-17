@@ -9,5 +9,5 @@ import (
 func main() {
 	a.Test()
 	fmt.Println("Name: ", a.Name)
-	fmt.Println("Age: ", a.Age)
+	fmt.Println("Age: ",  a.Age)
 }
